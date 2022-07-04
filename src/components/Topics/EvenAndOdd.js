@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
+
 export default function EvenAndOdd() {
-    const [userInput, setUserInput] = useState('');
+    const [userInput, setUserInput] = useState('npm ');
     const [ evens, setEvens ] = useState([]);
-  const [odds, setOdds] = useState([]);
+    const [odds, setOdds] = useState([]);
 
 
   function solve(input) {
@@ -11,7 +12,7 @@ export default function EvenAndOdd() {
       evens: [],
       odds: [],
     }
-    for (let val of input.split(',').map(v => parseInt(v))) {
+    for (let val of input.split(',').map(v => parseInt(v,10))) {
       if (val % 2 === 0) {
         results.evens.push(val);
       } else {
